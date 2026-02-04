@@ -37,12 +37,12 @@ def hex_ungzip(hex_str):
         return f"Error at hex_ungzip(): {e}"
 
 if __name__ == "__main__":
-    mode = "hex"
+    mode = "morse"
     raw_input = ""
     args = sys.argv[1:]
-    if "-m" in args:
-        mode = "morse"
-        args.remove("-m")
+    if "-h" in args:
+        mode = "hex"
+        args.remove("-h")
     if args:
         raw_input = args[0]
     else:
